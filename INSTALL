@@ -1,0 +1,7 @@
+= INSTALL
+
+to prepare this repository you should issue the following command:
+[source,bash]
+----
+$ make all
+----

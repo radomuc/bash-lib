@@ -1,0 +1,29 @@
+# vim: expandtab shiftwidth=2 smartindent smarttab tabstop=2 softtabstop=2
+
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+---
+# default_stages: []
+default_install_hook_types: [pre-commit, pre-push]
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: destroyed-symlinks
+      - id: detect-private-key
+      - id: no-commit-to-branch
+        args: [-b, "unknown"]
+      - id: check-shebang-scripts-are-executable
+  - repo: https://github.com/radomuc/precommit-lib
+    rev: v1.1
+    hooks:
+      - id: ymllint
+  - repo: meta
+    hooks:
+      - id: check-useless-excludes
+      - id: identity
