@@ -48,8 +48,8 @@ DEFAULT_LOGLEVEL=$LOGWARN
 DEFAULT_VERBOSE=0
 
 function log {
-	local L_MSG="$2"
 	local L_LEVEL="$1"
+	local L_MSG="$2"
 
 	if [ -z "$L_LEVEL" ]; then
 		L_LEVEL=$LOGWARN
