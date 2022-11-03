@@ -20,7 +20,7 @@ repos:
         args: [-b, "unknown"]
       - id: check-shebang-scripts-are-executable
   - repo: https://github.com/radomuc/precommit-lib
-    rev: v1.1
+    rev: v1.2.1
     hooks:
       - id: ymllint
   - repo: meta
